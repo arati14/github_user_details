@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 
  class App extends Component {
    constructor(props) {
@@ -24,7 +25,7 @@ import './App.css';
     async handleSubmit(event) 
       {
         event.preventDefault();
-        const axios = require('axios');
+        // const axios = require('axios');
         const response = await axios.get(`https://api.github.com/users/${this.state.value}`);
         this.setState({data:response,});
         this.setState({username:this.state.data.data.login,
@@ -38,9 +39,8 @@ import './App.css';
       <div>
         <h1 className="Heading">Github User Details</h1>
         <form onSubmit={this.handleSubmit}>
-          <label className="text-area">enter the user id
-            <textarea   value={this.state.value} onChange={this.handleChange}/>
-          </label>
+          <label className="label">enter the user id:</label>
+          <textarea className="text-area"  value={this.state.value} onChange={this.handleChange}/>
           <input className="submit-button" type="submit" value="fetch details" />
         </form>
         <div className="display-box">

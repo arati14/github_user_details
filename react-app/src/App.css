@@ -5,17 +5,19 @@
 }
 
 .text-area{
-width: 300px;
+width: 250px;
 position: absolute;
-left: 400px;
+left:600px;
 top:100px;
+text-align: center;
 }
 
 .submit-button{
 position: absolute;
-left: 700px;
+left: 900px;
 top:100px;
-width: 100px;
+width: 150px;
+height: 36px;
 }
 .display-box{
   position: absolute;
@@ -27,4 +29,9 @@ width: 100px;
 {
   height: 200px;
   width:200px;
+}
+.label{
+  position: absolute;
+  top:105px;
+  left:450px
 }
