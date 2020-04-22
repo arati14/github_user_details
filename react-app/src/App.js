@@ -45,9 +45,9 @@ import axios from 'axios';
         </form>
         <div className="display-box">
             <img className="photo" src={this.state.src} alt=''></img>
-            <h2>{this.state.username}</h2>
-            <h2>{this.state.fullname}</h2>
-            <h2>{this.state.email}</h2>
+            <h3>{this.state.username}</h3>
+            <h3>{this.state.fullname}</h3>
+            <h3>{this.state.email}</h3>
          </div>
        
       </div>
