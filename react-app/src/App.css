@@ -7,7 +7,7 @@
 .text-area{
 width: 300px;
 position: absolute;
-left: 350px;
+left: 400px;
 top:100px;
 }
 
@@ -19,7 +19,12 @@ width: 100px;
 }
 .display-box{
   position: absolute;
-  left: 700px;
-top:100px;
+  left: 650px;
+  top:200px;
 
+}
+.photo
+{
+  height: 200px;
+  width:200px;
 }
