@@ -1,0 +1,3 @@
+// export const BUY_CAKE = 'BUY_CAKE'
+export const FETCH_USER_DETAILS ='FETCH_USER_DETAILS';
+export const FETCH_USER_NAME='FETCH_USER_NAME';
