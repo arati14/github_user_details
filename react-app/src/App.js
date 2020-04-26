@@ -5,7 +5,7 @@
 //  class App extends Component {
 //    constructor(props) {
 //      super(props)
-   
+
 //      this.state = {
 //         value: '',
 //         data:'',
@@ -17,12 +17,12 @@
 //      this.handleChange = this.handleChange.bind(this);
 //      this.handleSubmit = this.handleSubmit.bind(this);
 //    }
-  
+
 //    handleChange(event)
 //     {
 //       this.setState({value: event.target.value});
 //     }
-//     async handleSubmit(event) 
+//     async handleSubmit(event)
 //       {
 //         event.preventDefault();
 //         // const axios = require('axios');
@@ -33,7 +33,7 @@
 //         email:this.state.data.data.email,
 //         fullname:this.state.data.data.name});
 //      }
-          
+
 //   render() {
 //     return (
 //       <div>
@@ -49,31 +49,28 @@
 //             <h3>{this.state.fullname}</h3>
 //             <h3>{this.state.email}</h3>
 //          </div>
-       
+
 //       </div>
 //     )
 //   }
 // }
 
 // export default App
-import React, { Component } from 'react';
-import Details from './components/Details';
-import { Provider } from 'react-redux';
-import store from './redux/store';
+import React, { Component } from "react";
+import Details from "./components/Details";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
- class App extends Component {
+class App extends Component {
   render() {
     return (
-      <Provider store={store}> 
-      <div>
-      <Details/>
-      
-    </div></Provider>
-      
-    )
+      <Provider store={store}>
+        <div>
+          <Details />
+        </div>
+      </Provider>
+    );
   }
 }
 
-export default App
-
-
+export default App;
