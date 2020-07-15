@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "learn_react-1",
+			"path": "..\\.."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
