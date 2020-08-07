@@ -1,6 +1,7 @@
 import { FETCH_USER_DETAILS, FETCH_USER_NAME,ADD_REPO,CONTRIBUTION_DATA,REPO_LANGUAGE} from "../types/details";
 import {valueData} from "../types/value";
 import {appAction} from "../types/details";
+import { act } from "@testing-library/react";
 const initialState: valueData = {
   value: "",
   data: [],
@@ -13,9 +14,10 @@ const initialState: valueData = {
   followers:0,
   following:0,
   repoLanguageData:[],
-  // a:"",
-  // repoName:"",
-  // name:""
+  company:"",
+    bio:"",
+    location:"",
+    
 };
 
 const reducer = (state = initialState, action:appAction):valueData => {
@@ -34,7 +36,10 @@ const reducer = (state = initialState, action:appAction):valueData => {
         fullname: action.data.name,
         followers: action.data.followers,
         following: action.data.following,
-       // repo: action.data.public_repos,
+       location:action.data.location,
+       bio:action.data.bio,
+       company:action.data.company,
+
       };
       case ADD_REPO:
         return{

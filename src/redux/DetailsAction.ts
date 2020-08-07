@@ -1,8 +1,7 @@
 import axios from "axios";
 import {FETCH_USER_DETAILS,FETCH_USER_NAME,ADD_REPO,CONTRIBUTION_DATA,REPO_LANGUAGE} from "../types/details";
 import {appAction} from "../types/details";
-import { Dispatch } from "react";
-import { ReplOptions } from "repl";
+
 export const getName = (name : string ):appAction => {
   return {
     type: FETCH_USER_NAME,
@@ -19,6 +18,7 @@ export const getData = (name : string) => {
     });
   };
 };
+
 export const getRepo =(name : string) => 
   async(dispatch:any) => {
     const response1 = await axios.get(`https://api.github.com/users/${name}/repos`);
@@ -27,6 +27,7 @@ export const getRepo =(name : string) =>
       type:ADD_REPO ,
       data1: response1.data,
     });
+    console.log(response1.data)
     const arr=response1.data.map((item:any)=>item.name )
     for(let i=0;i< arr.length;i++){
       dispatch(getRepoLanguage(name,arr[i],i));
@@ -43,7 +44,7 @@ export const getRepo =(name : string) =>
     type: CONTRIBUTION_DATA,
     data2: contributionData,
   });
-  console.log(contributionData);
+  // console.log(contributionData);
 
 };
 const arrlang :any[]=[];
@@ -59,7 +60,7 @@ export const getRepoLanguage = (name: string,repoName: string,i:number) => async
     data3: arrlang,
     
   });
-  console.log(arrlang)
+  // console.log(arrlang)
   // console.log("arati")
   // console.log(responseLanguage.data)
 

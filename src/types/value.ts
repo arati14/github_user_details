@@ -15,5 +15,9 @@ export interface valueData{
      repoLanguageData:[],
     //  a:any,
     // repoName:string,
+    company:string,
+    bio:string,
+    location:string,
+  
      
 }
